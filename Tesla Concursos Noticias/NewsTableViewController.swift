@@ -13,11 +13,6 @@ class NewsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,15 +24,36 @@ class NewsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
+    }
+    
+    //Configure the layout of section
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.whiteColor()
+        
+        let fontSize: CGFloat = 10
+        let heightLabel: CGFloat = 20
+        
+        let label: UILabel = UILabel(frame: CGRect(x: 8, y: 5, width: self.view.frame.width, height: heightLabel))
+        label.autoresizesSubviews = true
+        label.textColor = UIColor(red: 52/255, green: 95/255, blue: 65/255, alpha: 1)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Últimas Notícias"
+        
+        label.font = UIFont(name:"System-Bold", size: fontSize)
+        
+        headerView.addSubview(label)
+        
+        return headerView
     }
 
-    /*
+
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
@@ -45,7 +61,7 @@ class NewsTableViewController: UITableViewController {
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

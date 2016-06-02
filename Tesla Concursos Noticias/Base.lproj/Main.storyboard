@@ -1,25 +1,138 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Tesla_Concursos_Noticias" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" autoresizesSubviews="NO" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6si-Nb-ldp">
+                                <rect key="frame" x="30" y="351" width="540" height="30"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ce9-Kx-3zp" kind="presentation" id="yWS-c4-dS8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aKd-8B-HXU">
+                                <rect key="frame" x="30" y="257" width="540" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla-logo" translatesAutoresizingMaskIntoConstraints="NO" id="kFq-s5-NWK">
+                                <rect key="frame" x="213" y="60" width="173" height="81"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notícias sobre concursos e dicas para melhorar seu desempenho nos estudos" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGR-fW-auE">
+                                <rect key="frame" x="30" y="157" width="540" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="GGn-eG-NTD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20242737003058053" green="0.37061957523835226" blue="0.64630891347364627" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.20242737" green="0.3706195752" blue="0.64630891349999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aKd-8B-HXU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="63D-jl-4nc"/>
+                            <constraint firstItem="aKd-8B-HXU" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="237" id="IEd-yg-YAn"/>
+                            <constraint firstItem="kFq-s5-NWK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="162" id="IEl-Kp-7HZ"/>
+                            <constraint firstItem="kFq-s5-NWK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="QCU-sf-BBq"/>
+                            <constraint firstItem="6si-Nb-ldp" firstAttribute="leading" secondItem="aKd-8B-HXU" secondAttribute="leading" id="R5Z-nU-YuZ"/>
+                            <constraint firstItem="KGR-fW-auE" firstAttribute="centerX" secondItem="kFq-s5-NWK" secondAttribute="centerX" id="RRt-jK-jDW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aKd-8B-HXU" secondAttribute="trailing" constant="10" id="Rfh-ny-4Yq"/>
+                            <constraint firstItem="KGR-fW-auE" firstAttribute="top" secondItem="kFq-s5-NWK" secondAttribute="bottom" constant="16" id="S9u-vF-sBk"/>
+                            <constraint firstItem="KGR-fW-auE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="ahg-ZX-Lm3"/>
+                            <constraint firstItem="kFq-s5-NWK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cFh-Yg-eBi"/>
+                            <constraint firstItem="6si-Nb-ldp" firstAttribute="centerX" secondItem="aKd-8B-HXU" secondAttribute="centerX" id="fqZ-Ew-tYi"/>
+                            <constraint firstItem="aKd-8B-HXU" firstAttribute="top" secondItem="KGR-fW-auE" secondAttribute="bottom" constant="17" id="kfe-Ia-omc"/>
+                            <constraint firstItem="aKd-8B-HXU" firstAttribute="top" secondItem="kFq-s5-NWK" secondAttribute="bottom" constant="70" id="mdR-0O-VWL"/>
+                            <constraint firstItem="6si-Nb-ldp" firstAttribute="top" secondItem="aKd-8B-HXU" secondAttribute="bottom" constant="64" id="niP-3k-u6q"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KGR-fW-auE" secondAttribute="trailing" constant="10" id="p6m-CA-5z5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kFq-s5-NWK" secondAttribute="trailing" constant="158" id="uHo-HB-SUn"/>
+                            <constraint firstItem="aKd-8B-HXU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="wcG-TH-twc"/>
+                            <constraint firstItem="6si-Nb-ldp" firstAttribute="trailing" secondItem="aKd-8B-HXU" secondAttribute="trailing" id="xs5-OF-0Io"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="IEl-Kp-7HZ"/>
+                                <exclude reference="uHo-HB-SUn"/>
+                                <exclude reference="mdR-0O-VWL"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="235" y="325"/>
+        </scene>
+        <!--Tesla-->
+        <scene sceneID="uXj-on-u1p">
+            <objects>
+                <tableViewController id="3Ae-Mc-wZy" customClass="NewsTableViewController" customModule="Tesla_Concursos_Noticias" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="177" sectionHeaderHeight="28" sectionFooterHeight="28" id="0ik-C3-uKz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" rowHeight="177" id="U9h-9o-anS">
+                                <rect key="frame" x="0.0" y="92" width="600" height="177"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U9h-9o-anS" id="9Pf-pC-r5m">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="176.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3Ae-Mc-wZy" id="o8f-9m-Z9A"/>
+                            <outlet property="delegate" destination="3Ae-Mc-wZy" id="Ele-dX-hMT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Tesla" id="LgF-3X-RDS"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kEP-ph-6em" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1534" y="325"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bYR-9o-bnz">
+            <objects>
+                <navigationController id="ce9-Kx-3zp" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="BCW-7I-bkU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.20242737" green="0.3706195752" blue="0.64630891349999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3Ae-Mc-wZy" kind="relationship" relationship="rootViewController" id="gp1-z6-CSB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OpF-2P-EGM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862" y="325"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tesla-logo" width="173" height="81"/>
+    </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

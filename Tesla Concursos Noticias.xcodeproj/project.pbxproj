@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		C2361A101D004E78009E838E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A0F1D004E78009E838E /* AppDelegate.swift */; };
-		C2361A121D004E78009E838E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A111D004E78009E838E /* ViewController.swift */; };
+		C2361A121D004E78009E838E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A111D004E78009E838E /* LoginViewController.swift */; };
 		C2361A151D004E78009E838E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2361A131D004E78009E838E /* Main.storyboard */; };
 		C2361A181D004E78009E838E /* Tesla_Concursos_Noticias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2361A161D004E78009E838E /* Tesla_Concursos_Noticias.xcdatamodeld */; };
 		C2361A1A1D004E78009E838E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2361A191D004E78009E838E /* Assets.xcassets */; };
 		C2361A1D1D004E78009E838E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2361A1B1D004E78009E838E /* LaunchScreen.storyboard */; };
 		C2361A281D004E78009E838E /* Tesla_Concursos_NoticiasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A271D004E78009E838E /* Tesla_Concursos_NoticiasTests.swift */; };
 		C2361A331D004E78009E838E /* Tesla_Concursos_NoticiasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A321D004E78009E838E /* Tesla_Concursos_NoticiasUITests.swift */; };
+		C2361A441D005722009E838E /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2361A431D005722009E838E /* NewsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,7 @@
 /* Begin PBXFileReference section */
 		C2361A0C1D004E78009E838E /* Tesla Concursos Noticias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tesla Concursos Noticias.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2361A0F1D004E78009E838E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2361A111D004E78009E838E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C2361A111D004E78009E838E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C2361A141D004E78009E838E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2361A171D004E78009E838E /* Tesla_Concursos_Noticias.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tesla_Concursos_Noticias.xcdatamodel; sourceTree = "<group>"; };
 		C2361A191D004E78009E838E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		C2361A2E1D004E78009E838E /* Tesla Concursos NoticiasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tesla Concursos NoticiasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2361A321D004E78009E838E /* Tesla_Concursos_NoticiasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tesla_Concursos_NoticiasUITests.swift; sourceTree = "<group>"; };
 		C2361A341D004E78009E838E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2361A431D005722009E838E /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +101,11 @@
 		C2361A0E1D004E78009E838E /* Tesla Concursos Noticias */ = {
 			isa = PBXGroup;
 			children = (
+				C2361A421D0056D9009E838E /* Controller */,
+				C2361A411D0056CE009E838E /* View */,
+				C2361A401D0056C8009E838E /* Model */,
 				C2361A0F1D004E78009E838E /* AppDelegate.swift */,
-				C2361A111D004E78009E838E /* ViewController.swift */,
-				C2361A131D004E78009E838E /* Main.storyboard */,
 				C2361A191D004E78009E838E /* Assets.xcassets */,
-				C2361A1B1D004E78009E838E /* LaunchScreen.storyboard */,
 				C2361A1E1D004E78009E838E /* Info.plist */,
 				C2361A161D004E78009E838E /* Tesla_Concursos_Noticias.xcdatamodeld */,
 			);
@@ -126,6 +128,31 @@
 				C2361A341D004E78009E838E /* Info.plist */,
 			);
 			path = "Tesla Concursos NoticiasUITests";
+			sourceTree = "<group>";
+		};
+		C2361A401D0056C8009E838E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C2361A411D0056CE009E838E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2361A131D004E78009E838E /* Main.storyboard */,
+				C2361A1B1D004E78009E838E /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C2361A421D0056D9009E838E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2361A111D004E78009E838E /* LoginViewController.swift */,
+				C2361A431D005722009E838E /* NewsTableViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2361A121D004E78009E838E /* ViewController.swift in Sources */,
+				C2361A441D005722009E838E /* NewsTableViewController.swift in Sources */,
+				C2361A121D004E78009E838E /* LoginViewController.swift in Sources */,
 				C2361A181D004E78009E838E /* Tesla_Concursos_Noticias.xcdatamodeld in Sources */,
 				C2361A101D004E78009E838E /* AppDelegate.swift in Sources */,
 			);
