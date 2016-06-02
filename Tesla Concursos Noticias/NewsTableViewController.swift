@@ -42,7 +42,7 @@ class NewsTableViewController: UITableViewController {
         
         let label: UILabel = UILabel(frame: CGRect(x: 8, y: 5, width: self.view.frame.width, height: heightLabel))
         label.autoresizesSubviews = true
-        label.textColor = UIColor(red: 52/255, green: 95/255, blue: 65/255, alpha: 1)
+        label.textColor = UIColor(red: 52/255, green: 95/255, blue: 165/255, alpha: 1)
         label.textAlignment = NSTextAlignment.Center
         label.text = "Últimas Notícias"
         
